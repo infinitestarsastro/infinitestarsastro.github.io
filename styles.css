@@ -1,103 +1,230 @@
-/* 
- * Infinite Stars Astrology - Pandit-Themed Stylesheet
- * 
- * Updated color scheme:
- * - Primary: #d48806 (Deep Saffron Orange)
- * - Secondary: #ffcc29 (Bright Gold)
- * - Background: #fff5e1 (Warm Creamy White)
- * - Text: #5a2e02 (Deep Brown)
- * - Accent: #f4a900 (Vibrant Yellow-Orange)
- */
-
-/* === Base Styles === */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@400;500;600;700&display=swap');
-
-:root {
-    /* Spiritual & Traditional Colors */
-    --primary-color: #d48806; /* Deep Saffron */
-    --secondary-color: #ffcc29; /* Bright Gold */
-    --background-color: #fff5e1; /* Warm Cream */
-    --text-color: #5a2e02; /* Deep Brown */
-    --accent-color: #f4a900; /* Vibrant Yellow-Orange */
-    --light-bg: #fffaf0; /* Soft Off-White */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f2e6; /* Light beige background for a soothing look */
+    color: #333; /* Dark grey text for good contrast */
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Merriweather', serif;
-}
-
-/* === Navigation === */
+/* Header and Navigation */
 #navbar {
-    background-color: rgba(212, 136, 6, 0.9); /* Saffron with Transparency */
+    background-color: #e4b16e; /* Gold background for navbar */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: background-color 0.3s ease;
 }
 
-.logo {
-    color: var(--secondary-color); /* Gold */
+#navbar.scrolled {
+    background-color: #f2a800; /* Darker gold for scrolled effect */
+}
+
+#navbar .logo span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--accent-color); /* Vibrant Yellow */
+    color: #f2a800; /* Orange color on hover */
 }
 
-/* === Hero Section === */
+/* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(255, 200, 120, 0.7), rgba(255, 200, 120, 0.8)), url('images/pandit-bg.jpg'); /* Add a spiritual background */
+    background: linear-gradient(135deg, #f2a800, #ffcc00); /* Orange to yellow gradient */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
-/* === CTA Button === */
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .cta-button {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: #f2a800; /* Orange */
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #e4b16e; /* Gold */
 }
 
-/* === Services Section === */
+/* About Section */
+.about {
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    color: #f2a800; /* Orange */
+    font-size: 36px;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Services Section */
+.services {
+    background-color: #ffcc00; /* Yellow background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services h2 {
+    color: #f2a800; /* Orange */
+    font-size: 36px;
+}
+
 .service-card {
-    background-color: var(--light-bg);
+    background-color: white;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.service-icon {
-    color: var(--primary-color);
+.service-card:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
 }
 
-.service-button {
-    background-color: var(--primary-color);
+.service-icon i {
+    font-size: 40px;
+    color: #f2a800; /* Gold */
 }
 
-.service-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+.price {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #f2a800;
 }
 
-/* === Testimonials Section === */
+/* Testimonials Section */
+.testimonials {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
 .testimonial {
-    background-color: var(--light-bg);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    display: none; /* Hide testimonials by default */
 }
 
-.quote .fa-quote-left,
-.quote .fa-quote-right {
-    color: var(--primary-color);
+.testimonial .quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #666;
 }
 
-/* === Footer === */
+.testimonial .client {
+    margin-top: 20px;
+}
+
+.client .name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #f2a800;
+}
+
+.stars i {
+    color: #f2a800;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f8f2e6; /* Light beige background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #f2a800; /* Orange */
+    font-size: 36px;
+}
+
+/* Footer */
 footer {
-    background-color: #d48806; /* Saffron */
+    background-color: #e4b16e; /* Gold background */
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #f2a800; /* Orange hover effect */
 }
 
 .footer-logo {
-    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.footer-links a:hover {
-    color: var(--accent-color);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+    
+    .nav-links.active {
+        display: block;
+    }
+
+    .menu-toggle i {
+        font-size: 30px;
+    }
 }
