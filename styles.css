@@ -1,526 +1,103 @@
 /* 
- * Infinite Stars Astrology - Main Stylesheet
+ * Infinite Stars Astrology - Pandit-Themed Stylesheet
  * 
- * EDIT: Customize colors and fonts to match your brand
- * Current color scheme:
- * - Primary: #6b4aa0 (purple)
- * - Secondary: #f9d365 (gold)
- * - Background: #13111a (dark blue/black)
- * - Text: #f5f5f7 (off-white)
+ * Updated color scheme:
+ * - Primary: #d48806 (Deep Saffron Orange)
+ * - Secondary: #ffcc29 (Bright Gold)
+ * - Background: #fff5e1 (Warm Creamy White)
+ * - Text: #5a2e02 (Deep Brown)
+ * - Accent: #f4a900 (Vibrant Yellow-Orange)
  */
 
 /* === Base Styles === */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@400;500;600;700&display=swap');
 
 :root {
-    /* EDIT: Customize these variables to match your brand colors */
-    --primary-color: #6b4aa0;
-    --secondary-color: #f9d365;
-    --dark-bg: #13111a;
-    --light-text: #f5f5f7;
-    --light-bg: #1e1a2b;
-    --accent-color: #ff6b95;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    /* Spiritual & Traditional Colors */
+    --primary-color: #d48806; /* Deep Saffron */
+    --secondary-color: #ffcc29; /* Bright Gold */
+    --background-color: #fff5e1; /* Warm Cream */
+    --text-color: #5a2e02; /* Deep Brown */
+    --accent-color: #f4a900; /* Vibrant Yellow-Orange */
+    --light-bg: #fffaf0; /* Soft Off-White */
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--light-text);
-    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--secondary-color);
-    margin: 0.5rem auto;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-section {
-    padding: 5rem 0;
+    font-family: 'Merriweather', serif;
 }
 
 /* === Navigation === */
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: rgba(19, 17, 26, 0.9);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: 0.3s ease-in-out;
-}
-
-#navbar.scrolled {
-    padding: 1rem 2rem;
-    background-color: rgba(19, 17, 26, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(212, 136, 6, 0.9); /* Saffron with Transparency */
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-
-.nav-links a {
-    margin-left: 2rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: 0.3s;
+    color: var(--secondary-color); /* Gold */
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
+    color: var(--accent-color); /* Vibrant Yellow */
 }
 
 /* === Hero Section === */
 .hero {
-    height: 100vh;
-    background-image: linear-gradient(rgba(19, 17, 26, 0.7), rgba(19, 17, 26, 0.8)), url('images/stars-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+    background-image: linear-gradient(rgba(255, 200, 120, 0.7), rgba(255, 200, 120, 0.8)), url('images/pandit-bg.jpg'); /* Add a spiritual background */
 }
 
-/* EDIT: Create or find a star background image and place it in the images folder */
-
-.hero-content {
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--light-text);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--secondary-color);
-}
-
+/* === CTA Button === */
 .cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
     background-color: var(--primary-color);
-    color: var(--light-text);
-    border-radius: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    border: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .cta-button:hover {
-    background-color: transparent;
-    border-color: var(--primary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* === About Section === */
-.about {
-    background-color: var(--light-bg);
-}
-
-.about-content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.about-text {
-    flex: 1;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 /* === Services Section === */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
 .service-card {
     background-color: var(--light-bg);
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .service-icon {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin: 1rem 0;
+    color: var(--primary-color);
 }
 
 .service-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
     background-color: var(--primary-color);
-    color: var(--light-text);
-    border-radius: 50px;
-    font-weight: 500;
-    margin-top: 1rem;
-    transition: 0.3s;
 }
 
 .service-button:hover {
     background-color: var(--secondary-color);
-    color: var(--dark-bg);
+    color: var(--text-color);
 }
 
 /* === Testimonials Section === */
-.testimonials {
-    background-color: var(--light-bg);
-}
-
-.testimonial-slider {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .testimonial {
-    padding: 2rem;
-    margin-bottom: 2rem;
-    background-color: var(--dark-bg);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-bg);
 }
 
-.quote {
-    position: relative;
-    padding: 1rem;
-}
-
-.quote .fa-quote-left {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    color: var(--primary-color);
-    opacity: 0.3;
-    font-size: 1.5rem;
-}
-
+.quote .fa-quote-left,
 .quote .fa-quote-right {
-    position: absolute;
-    bottom: 0;
-    right: -10px;
     color: var(--primary-color);
-    opacity: 0.3;
-    font-size: 1.5rem;
-}
-
-.client {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.name {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.stars {
-    color: var(--secondary-color);
-    margin-top: 0.5rem;
-}
-
-/* === Contact Section === */
-.contact-content {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 2rem;
-}
-
-.contact-form {
-    background-color: var(--light-bg);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border-radius: 5px;
-    border: 1px solid #333;
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--light-text);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.submit-button {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.submit-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--dark-bg);
-}
-
-.contact-info {
-    padding: 2rem;
-}
-
-.contact-info p {
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.contact-info i {
-    margin-right: 1rem;
-    width: 25px;
-    color: var(--secondary-color);
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.social-links a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--light-bg);
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
 }
 
 /* === Footer === */
 footer {
-    background-color: #0d0b12;
-    padding: 3rem 0;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    background-color: #d48806; /* Saffron */
 }
 
 .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
     color: var(--secondary-color);
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-links a {
-    font-size: 0.9rem;
-    transition: 0.3s;
 }
 
 .footer-links a:hover {
-    color: var(--secondary-color);
-}
-
-.copyright {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: rgba(245, 245, 247, 0.7);
-}
-
-/* === Responsive Styles === */
-@media (max-width: 992px) {
-    .about-content {
-        flex-direction: column;
-    }
-
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-        order: -1;
-    }
-}
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background-color: var(--dark-bg);
-        padding: 2rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        transform: translateY(-150%);
-        transition: 0.3s;
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-    }
-
-    .nav-links a {
-        margin-left: 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 3rem 0;
-    }
+    color: var(--accent-color);
 }
