@@ -17,7 +17,7 @@
     --primary-color: #face91;
     --secondary-color: #995d12;
     --dark-bg: #fcefb4;
-    --light-text: #0d0600;
+    --light-text: #1c0f04;
     --light-bg: #ffb463;
     --accent-color: #ffce6b;
 }
@@ -151,7 +151,7 @@ section {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     color: var(--light-text);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 8px rgba(28, 15, 4, 0.5);
 }
 
 .hero p {
