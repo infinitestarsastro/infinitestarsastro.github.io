@@ -15,10 +15,10 @@
 :root {
     /* EDIT: Customize these variables to match your brand colors */
     --primary-color: #ffc87a;
-    --secondary-color: #ffddad;
-    --dark-bg: #f2994b;
+    --secondary-color: #f5b342;
+    --dark-bg: #fcefb4;
     --light-text: #0d0600;
-    --light-bg: #fcefb4;
+    --light-bg: #f2994b;
     --accent-color: #ffce6b;
 }
 
