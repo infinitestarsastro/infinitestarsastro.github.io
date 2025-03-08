@@ -89,7 +89,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    background-color: rgba(196, 121, 0, 0.9);
+    background-color: rgba(247, 130, 84, 0.9);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: 0.3s ease-in-out;
@@ -421,7 +421,7 @@ section {
 
 /* === Footer === */
 footer {
-    background-color: #c47900;
+    background-color: #f78254;
     padding: 3rem 0;
 }
 
