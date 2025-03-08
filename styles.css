@@ -18,7 +18,7 @@
     --secondary-color: #f5b342;
     --dark-bg: #fcefb4;
     --light-text: #0d0600;
-    --light-bg: #f2994b;
+    --light-bg: #fab170;
     --accent-color: #ffce6b;
 }
 
@@ -182,7 +182,7 @@ section {
 
 /* === About Section === */
 .about {
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
 }
 
 .about-content {
@@ -409,7 +409,7 @@ section {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
     border-radius: 50%;
     transition: 0.3s;
 }
