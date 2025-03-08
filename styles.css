@@ -14,11 +14,11 @@
 
 :root {
     /* EDIT: Customize these variables to match your brand colors */
-    --primary-color: #ffa50a;
-    --secondary-color: #63330b;
-    --dark-bg: #ffa03b;
-    --light-text: #170a03;
-    --light-bg: #ab4016;
+    --primary-color: #ffc87a;
+    --secondary-color: #ffddad;
+    --dark-bg: #f2994b;
+    --light-text: #0d0600;
+    --light-bg: #fcefb4;
     --accent-color: #ffce6b;
 }
 
