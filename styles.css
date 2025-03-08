@@ -15,10 +15,10 @@
 :root {
     /* EDIT: Customize these variables to match your brand colors */
     --primary-color: #face91;
-    --secondary-color: #db8c04;
+    --secondary-color: #995d12;
     --dark-bg: #fcefb4;
     --light-text: #0d0600;
-    --light-bg: #fabd87;
+    --light-bg: #ffb463;
     --accent-color: #ffce6b;
 }
 
@@ -421,7 +421,8 @@ section {
 
 /* === Footer === */
 footer {
-    background-color: #ff9f40;
+    background-color: rgba(255, 159, 64, 0.9);
+    backdrop-filter: blur(10px);
     padding: 3rem 0;
 }
 
