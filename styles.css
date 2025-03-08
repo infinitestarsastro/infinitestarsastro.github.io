@@ -14,8 +14,8 @@
 
 :root {
     /* EDIT: Customize these variables to match your brand colors */
-    --primary-color: #ffc87a;
-    --secondary-color: #f5b342;
+    --primary-color: #face91;
+    --secondary-color: #db8c04;
     --dark-bg: #fcefb4;
     --light-text: #0d0600;
     --light-bg: #fab170;
@@ -265,7 +265,7 @@ section {
 
 /* === Testimonials Section === */
 .testimonials {
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
 }
 
 .testimonial-slider {
@@ -276,7 +276,7 @@ section {
 .testimonial {
     padding: 2rem;
     margin-bottom: 2rem;
-    background-color: var(--dark-bg);
+    background-color: var(--light-bg);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
