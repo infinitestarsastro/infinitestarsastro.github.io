@@ -130,7 +130,7 @@ section {
 /* === Hero Section === */
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(19, 17, 26, 0.7), rgba(19, 17, 26, 0.8)), url('images/stars-bg.jpg');
+    background-image: linear-gradient(rgba(247, 174, 121, 0.7), rgba(250, 150, 92, 0.8));
     background-size: cover;
     background-position: center;
     display: flex;
